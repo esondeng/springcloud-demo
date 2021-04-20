@@ -11,6 +11,13 @@
 
     <artifactId>springcloud-demo-provider</artifactId>
     <dependencies>
+
+        <dependency>
+            <groupId>com.springcloud.eson</groupId>
+            <artifactId>springcloud-demo-client</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>

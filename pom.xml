@@ -17,6 +17,7 @@
     <modules>
         <module>springcloud-demo-provider</module>
         <module>springcloud-demo-consumer</module>
+        <module>springcloud-demo-client</module>
     </modules>
 
     <properties>
