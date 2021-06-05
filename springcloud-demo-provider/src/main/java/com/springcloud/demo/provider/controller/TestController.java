@@ -1,9 +1,13 @@
 package com.springcloud.demo.provider.controller;
 
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
+
+import com.springcloud.demo.client.query.TestQuery;
+import com.springcloud.demo.client.response.TestTo;
+import com.springcloud.demo.client.service.TestService;
 
 /**
  * @author dengxiaolin
@@ -11,10 +15,14 @@ import org.springframework.web.bind.annotation.RestController;
  */
 @RestController
 @EnableDiscoveryClient
-public class TestController {
+public class TestController implements TestService {
 
-    @GetMapping(value = "/echo/{string}")
-    public String echo(@PathVariable String string) {
-        return string;
+    @PostMapping(value = "/echo")
+    @Override
+    public TestTo echo(@RequestBody TestQuery testQuery) {
+        TestTo testTo = new TestTo();
+        testTo.setName(testQuery.getName());
+
+        return testTo;
     }
 }

@@ -20,6 +20,13 @@
             <artifactId>spring-cloud-starter-openfeign</artifactId>
             <version>2.2.4.RELEASE</version>
         </dependency>
+
+        <dependency>
+            <groupId>com.springcloud.eson</groupId>
+            <artifactId>springcloud-demo-client</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+
         <dependency>
             <groupId>io.github.openfeign</groupId>
             <artifactId>feign-okhttp</artifactId>

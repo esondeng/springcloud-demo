@@ -15,7 +15,7 @@ import com.springcloud.demo.consumer.spring.ConsumerConfig;
 @Import({
         ConsumerConfig.class
 })
-@EnableFeignClients
+@EnableFeignClients(basePackages = {"com.springcloud.demo.client.service"})
 public class ConsumerApplication {
     public static void main(String[] args) {
         SpringApplication.run(ConsumerApplication.class, args);

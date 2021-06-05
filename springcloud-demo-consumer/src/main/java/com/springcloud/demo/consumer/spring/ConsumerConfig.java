@@ -11,7 +11,7 @@ import org.springframework.context.support.PropertySourcesPlaceholderConfigurer;
  * @since 2021/04/20
  */
 @Configuration
-@ComponentScan({"com.springcloud.demo.consumer"})
+@ComponentScan({"com.springcloud.demo"})
 @PropertySource(value = "classpath:config/${spring.profiles.active:dev}/nacos.properties")
 public class ConsumerConfig {
     @Bean
